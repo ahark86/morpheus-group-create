@@ -10,5 +10,5 @@ GROUP_CODE = morpheus['customOptions']['subgroupcode']
 GROUP_LOCATION = morpheus['customOptions']['subgrouplocation']
 PAYLOAD = {"group": {"name": GROUP_NAME, "code": GROUP_CODE, "location": GROUP_LOCATION}}
 
-response = requests.post(URL, json=PAYLOAD, headers=HEADERS)
+response = requests.post(URL, json=PAYLOAD, headers=HEADERS, verify=False)
 print('Group Added Successfully.')
